@@ -1,0 +1,73 @@
+/* 기본 box border-box로 설정 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 기본 레이아웃 Grid로 구성 */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "aside-left main aside-right"
+        "footer footer footer";
+    grid-template-rows: 60px auto 200px;
+    grid-template-columns: 2fr 10fr 2fr;
+    gap: 10px;
+    height: 100vh;
+    min-width: 640px;
+    min-height: 1000px;
+}
+
+.header-grid {
+    grid-area: header;
+    background-color: #e0e0e0;
+}
+
+.aside-left {
+    grid-area: aside-left;
+    background-color: #f8bbd0;
+}
+
+.aside-right {
+    grid-area: aside-right;
+    background-color: #f8bbd0;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: #f5f5f5;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #d1c4e9;
+}
+
+/* body 기본색 설정 */
+body {
+    background-color: #B4ADEA;
+}
+
+/* 반응형 미디어쿼리 설정 */
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        grid-template-rows: auto 1fr 200px;
+        grid-template-columns: 1fr;
+        min-width: 200px;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aside {
+        display: none;
+    }
+}
