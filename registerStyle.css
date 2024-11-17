@@ -1,0 +1,62 @@
+.main {
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+}
+
+.register-form-container {
+    background-color: #FDFFF7;
+    width: 70%;
+    height: 70%;
+    place-items: center;
+    font-family: "GmarketSansMedium";
+    padding: 20px;
+    border-radius: 3%;
+    max-width: 450px;
+    box-shadow: 10px 10px 10px grey;
+    max-height: 700px;
+    min-height: 700px;
+}
+
+.grid-register {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 90%;
+    gap: 20px;
+}
+
+.grid-register p {
+    font-size: 2em;
+    padding-bottom: 20px;
+}
+
+.register-input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #AEADF0;
+}
+
+.register-input-label {
+    font-size: 1.5em;
+}
+
+
+.register-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register-submit {
+    margin-top: 20px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #AEADF0;
+    background-color: #051014;
+    color: white;
+    font-family: "GmarketSansMedium";
+    font-size: 20px;
+}

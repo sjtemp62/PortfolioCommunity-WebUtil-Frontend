@@ -43,17 +43,144 @@
 
 .footer {
     grid-area: footer;
-    background-color: #d1c4e9;
+    background-color: #191f28;
+    color: white;
+    display: grid;
+    place-items: center;
 }
 
 /* body 기본색 설정 */
 body {
     background-color: #B4ADEA;
+    background: linear-gradient(to bottom, #e0e0e0, #B4ADEA);
 }
+
+
+/* 헤더 CSS 설정 */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.header-style {
+    background-color: #FDFFF7;
+    border-bottom: 1px solid rgb(178, 177, 177);
+}
+
+.logo {
+    display: flex;
+    margin-left: 30px;
+    flex: 1.1;
+    align-items: center;
+    max-width: 200px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo p {
+    font-family: "BMDOHYEON";
+    font-size: 1.5em;
+    font-weight: 600;
+    min-width: 100px;
+    flex-shrink: 0;
+    margin-left: 7.5px;
+}
+
+nav {
+    flex: 3;
+}
+
+.user {
+    flex: 0.6;
+    min-width: fit-content;
+}
+
+.button-container {
+    font-family: "GmarketSansMedium";
+    display: flex;
+    justify-content: space-around;
+    margin-right: 15px;
+    flex-shrink: 0;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.button-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-bar {
+    display: flex;
+    font-family: "GmarketSansMedium";
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    gap: 5px;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer address {
+    font-family: "NanumSquare";
+    color:#8f9cac;
+    width: 580px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.company-name {
+    font-size: 15px;
+    font-weight: 700;
+}
+
 
 /* 반응형 미디어쿼리 설정 */
 
 @media (max-width: 768px) {
+    .header-flex {
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .logo {
+        margin-top: 10px;
+        padding-bottom: 5px;
+        margin-left: 0;
+        max-width: none;
+        width: 100%;
+        border-bottom: 1px solid rgb(178, 177, 177);
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-container {
+        gap: 40px;
+        margin-bottom: 10px;
+        margin-top: 2px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .menu-bar {
+        margin-top: 2px;
+        gap: 40px;
+        border-bottom: 1px solid rgb(178, 177, 177);
+        padding-bottom: 12px;
+        width: 100%;
+    }
+
     .grid-container {
         grid-template-areas:
             "header"
@@ -64,10 +191,11 @@ body {
         min-width: 200px;
         gap: 0px;
     }
-}
 
-@media (max-width: 768px) {
-    .aside {
+    .aside-left {
+        display: none;
+    }
+    .aside-right {
         display: none;
     }
 }

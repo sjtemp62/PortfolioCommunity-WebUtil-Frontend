@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>20203015 박성종 - 포트폴리오 커뮤니티</title>
-    <link rel="stylesheet" href="global.css">
+    <title>20203015 박성종 - 어비스잡</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="mainStyle.css">
+    <link rel="stylesheet" href="loginStyle.css">
 </head>
 
 <body>
@@ -16,9 +16,9 @@
         <header class="header-flex header-grid header-style">
             <div class="logo">
                 <img src="images/black-hole.png" alt="로고">
-                <p>어비스 잡</p>
+                <p>어비스잡</p>
             </div>
-            <nav>
+            <nav class="nav">
                 <ul class="menu-bar">
                     <li><a href="main.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,17 +33,38 @@
                 </div>
             </div>
         </header>
-        <aside class="aside">
 
+        <aside class="aside-left" style="background-color: transparent;">
         </aside>
+
         <main class="main">
-
+            <div class="login-form-container">
+                <form class="grid-login">
+                    <p>로그인</p>
+                    <div class="login-input-container">
+                        <label for="login-email" class="login-input-label">이메일</label>
+                        <input type="email" name="email" id="login-email" class="login-input">
+                    </div>
+                    <div class="login-input-container">
+                        <label for="login-password" class="login-input-label">비밀번호</label>
+                        <input type="password" name="password" id="login-password" class="login-input">
+                    </div>
+                    <input type="submit" class="login-submit"></input>
+                </form>
+            </div>
         </main>
-        <aside class="aside">
 
+        <aside class="aside-right" style="background-color: transparent;">
         </aside>
-        <footer class="footer">
 
+        <footer class="footer">
+            <address>
+                <strong class="company-name">㈜어비스잡</strong><br><br>
+                사업자 등록번호 : 202-03-01500 | 대표 : 박성종<br>
+                호스팅 서비스 : 주식회사 어비스잡 | 통신판매업 신고번호 : 2024-부산부산진-00000<br>
+                부산 부산진구 엄광로 176 (동의대학교 가야캠퍼스)<br>
+                고객센터 : 부산 부산진구 엄광로 176 동의대학교 컴퓨터공학과
+            </address>
         </footer>
     </div>
 </body>
