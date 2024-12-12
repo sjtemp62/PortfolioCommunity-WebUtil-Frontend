@@ -21,6 +21,20 @@
     transition: transform 0.3s, box-shadow 0.3s;
     gap: 20px;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .companyBox:hover {
@@ -52,7 +66,6 @@
 .companylogo {
     width: 30%;
     height: auto;
-    margin-bottom: 15px;
 }
 
 .companyDescription {

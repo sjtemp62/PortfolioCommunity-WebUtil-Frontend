@@ -1,0 +1,207 @@
+.portfolio-container {
+    max-width: 800px;
+    min-width: 500px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 30vh;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.portfolio-container h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+#addPortfolioButton,
+#editPortfolioButton,
+#deletePortfolioButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#addPortfolioButton:hover,
+#editPortfolioButton:hover,
+#deletePortfolioButton:hover {
+    background: #45a049;
+}
+
+#portfolioList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.portfolio-item img {
+    border-radius: 5px;
+}
+
+.portfolio-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.portfolio-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.portfolio-item .actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.portfolio-item .actions .edit-button {
+    background: #007bff;
+    color: white;
+}
+
+.portfolio-item .actions .delete-button {
+    background: #dc3545;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-content form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content form button:hover {
+    background: #45a049;
+}
+
+.portfolio-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    justify-content: center;
+    align-items: center;
+}
+
+.portcontent {
+    flex: 1;
+}
+
+.portcontent h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+.portcontent p {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 25px;
+}
+
+.portfolioImage {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}

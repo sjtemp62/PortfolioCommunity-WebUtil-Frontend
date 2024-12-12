@@ -6,8 +6,9 @@ const companyName = params.get("company");
 const companies = [
     {
       "logo": "https://imgs.jobkorea.co.kr/Images/Logo/180/v/i/2338p00pgpgqjleefarwq2_4120aeiarwqcdzbghus43pa.gif?p=y&hash=c&upddt=20241212144600",
-      "name": "토스",
-      "description": "[토스] Ads Sales Specialist (광고영업)"
+      "name": "(주)비바리퍼블리카",
+      "description": "[토스] Ads Sales Specialist (광고영업)",
+      "RCDescription" : "<img src='images/토스AD.jpg' alt='토스AD'>"
     },
     {
       "logo": "https://imgs.jobkorea.co.kr/Images/Logo/180/l/a/2976l00lswzvv2_2320p6apnyfiolp.gif?p=y&hash=c&upddt=20241209105700",
@@ -36,8 +37,9 @@ const companies = [
     },
     {
       "logo": "https://imgs.jobkorea.co.kr/Images/Logo/180/v/i/2338p00pgpgqjleefarwq2_4120aeiarwqcdzbghus43pa.gif?p=y&hash=c&upddt=20241211182500",
-      "name": "토스플레이스",
-      "description": "[토스플레이스]Sales Specialist"
+      "name": "(주)비바리퍼블리카",
+      "description": "[토스플레이스]Sales Specialist",
+      "RCDescription" : "<img src='images/TOSSPLACE 채용공고.png' alt='토스AD'>"
     },
     {
       "logo": "https://imgs.jobkorea.co.kr/Images/Logo/180/m/a/2459z00ztjdgxlqxf2_3320naenwqjhegxaczn.gif?p=y&hash=c&upddt=20241209130500",
@@ -208,7 +210,66 @@ const company = companies.find((c) => c.name === companyName);
 if (company) {
     document.getElementById("companyName").textContent = company.name;
     document.getElementById("companyLogo").src = company.logo;
-    document.getElementById("companyDescription").textContent = company.description;
+    document.getElementById("companyRCtitle").textContent = company.description;
+    document.getElementById("companyRCDescription").innerHTML = company.RCDescription || "<img src='images/토스AD.jpg' alt='토스AD'>";
 } else {
-    document.getElementById("companyName").textContent = "회사 정보를 찾을 수 없습니다.";
+    document.getElementById("companyName").textContent = "(주)비바리퍼블리카";
+    document.getElementById("companyLogo").src = "https://imgs.jobkorea.co.kr/Images/Logo/180/v/i/2338p00pgpgqjleefarwq2_4120aeiarwqcdzbghus43pa.gif?p=y&hash=c&upddt=20241211182500";
+    document.getElementById("companyRCtitle").textContent = "[토스] Ads Sales Specialist (광고영업)";
+    document.getElementById("companyRCDescription").innerHTML = "<img src='images/토스AD.jpg' alt='토스AD'>";
 }
+
+// Edit and Save button functionality
+document.getElementById('editButton').addEventListener('click', () => {
+    const titleElement = document.getElementById('companyRCtitle');
+    const titleInput = document.getElementById('companyRCtitleInput');
+    const descriptionElement = document.getElementById('companyRCDescription');
+    const descriptionInput = document.getElementById('companyRCDescriptionInput');
+    const editButton = document.getElementById('editButton');
+    const saveButton = document.getElementById('saveButton');
+
+    titleInput.value = titleElement.textContent;
+    titleElement.style.display = 'none';
+    titleInput.style.display = 'block';
+
+    descriptionElement.style.display = 'none';
+    descriptionInput.style.display = 'block';
+
+    editButton.style.display = 'none';
+    saveButton.style.display = 'block';
+});
+
+document.getElementById('saveButton').addEventListener('click', () => {
+    const titleElement = document.getElementById('companyRCtitle');
+    const titleInput = document.getElementById('companyRCtitleInput');
+    const descriptionElement = document.getElementById('companyRCDescription');
+    const descriptionInput = document.getElementById('companyRCDescriptionInput');
+    const editButton = document.getElementById('editButton');
+    const saveButton = document.getElementById('saveButton');
+
+    titleElement.textContent = titleInput.value;
+    titleElement.style.display = 'block';
+    titleInput.style.display = 'none';
+
+    if (descriptionInput.files.length > 0) {
+        const file = descriptionInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            descriptionElement.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image">`;
+        };
+        reader.readAsDataURL(file);
+    }
+
+    descriptionElement.style.display = 'block';
+    descriptionInput.style.display = 'none';
+
+    editButton.style.display = 'block';
+    saveButton.style.display = 'none';
+});
+
+document.querySelectorAll('.delete-button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('삭제처리되었습니다.');
+        window.location.href = 'main.html';
+    });
+});

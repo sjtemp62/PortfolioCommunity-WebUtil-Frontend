@@ -15,14 +15,22 @@
     <div class="grid-container">
         <header class="header-flex header-grid header-style">
             <div class="logo">
-                <img src="images/black-hole.png" alt="로고">
-                <p>어비스잡</p>
+                <a href="main.html">
+                    <img src="images/black-hole.png" alt="로고">
+                    <p>어비스잡</p>
+                </a>
             </div>
             <nav class="nav">
                 <ul class="menu-bar">
-                    <li><a href="main.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="main.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                    <li class="service nav-item">Services
+                        <ul class="serviceDetails">
+                            <li><a>포트폴리오 등록/관리</a></li>
+                            <li><a>포트폴리오 커뮤니티</a></li>
+                            <li><a>구인/구직 매칭</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -38,18 +46,23 @@
             <div class="details-container">
                 <header class="details-header">
                     <h1 id="companyName">회사명</h1>
+                    <div class="edit-button-container">
+                        <a href="#" class="edit-button" id="editButton">수정</a>
+                        <a href="#" class="save-button" id="saveButton" style="display:none;">저장</a>
+                        <a href="#" class="delete-button">삭제</a>
+                    </div>
                 </header>
                 <main class="details-main">
                     <div class="company-logo-container">
-                        <img id="companyLogo" src="" alt="회사 로고" class="company-logo">
+                        <img id="companyLogo" src="2338p00pgpgqjleefarwq2_4120aeiarwqcdzbghus43pa.gif" alt="회사 로고" class="company-logo">
+                        <p id="companyRCtitle">회사 설명이 여기에 표시됩니다.</p>
+                        <input type="text" id="companyRCtitleInput" style="display:none;">
                     </div>
                     <div class="company-info">
-                        <p id="companyDescription">회사 설명이 여기에 표시됩니다.</p>
+                        <p id="companyRCDescription">채용 상세정보</p>
+                        <input type="file" id="companyRCDescriptionInput" style="display:none;">
                     </div>
                 </main>
-                <footer class="details-footer">
-                    <a href="main.html" class="back-button">메인으로 돌아가기</a>
-                </footer>
             </div>
         </main>
 
@@ -63,35 +76,6 @@
             </address>
         </footer>
     </div>
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회사 상세 정보</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="detailsStyle.css">
-</head>
-<body>
-    <div class="details-container">
-        <header class="details-header">
-            <h1 id="companyName">회사명</h1>
-        </header>
-        <main class="details-main">
-            <div class="company-logo-container">
-                <img id="companyLogo" src="" alt="회사 로고" class="company-logo">
-            </div>
-            <div class="company-info">
-                <p id="companyDescription">회사 설명이 여기에 표시됩니다.</p>
-            </div>
-        </main>
-        <footer class="details-footer">
-            <a href="main.html" class="back-button">메인으로 돌아가기</a>
-        </footer>
-    </div>
+    <script src="details.js"></script>
 </body>
 </html>

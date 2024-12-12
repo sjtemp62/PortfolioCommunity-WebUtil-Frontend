@@ -38,6 +38,7 @@
     background: #fff;
     border-radius: 0 10px 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .aside-left h2,
@@ -118,6 +119,15 @@ body {
 
 .logo img {
     width: 50px;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
 }
 
 .logo p {
@@ -208,6 +218,7 @@ nav {
     background-color: #f5f5f5;
     width: fit-content;
     border: 1px solid rgb(178, 177, 177);
+    z-index: 10000;
 }
 
 .serviceDetails li {
