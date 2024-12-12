@@ -38,7 +38,9 @@
 
 .main {
     grid-area: main;
-    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
 }
 
 .footer {
@@ -130,13 +132,13 @@ nav {
 
 .footer address {
     font-family: "NanumSquare";
-    color:#8f9cac;
+    color: #8f9cac;
     width: 580px;
     font-size: 13px;
     line-height: 20px;
 }
 
-.company-name {
+.my-company-name {
     font-size: 15px;
     font-weight: 700;
 }
@@ -195,6 +197,7 @@ nav {
     .aside-left {
         display: none;
     }
+
     .aside-right {
         display: none;
     }
