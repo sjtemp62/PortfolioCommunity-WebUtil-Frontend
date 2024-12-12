@@ -5,7 +5,7 @@
 }
 
 .register-form-container {
-    background-color: #FDFFF7;
+    background-color: #fff;
     width: 70%;
     height: 70%;
     place-items: center;
@@ -14,6 +14,7 @@
     border-radius: 3%;
     max-width: 450px;
     box-shadow: 10px 10px 10px grey;
+    min-width: 500px;
     max-height: 700px;
     min-height: 700px;
 }

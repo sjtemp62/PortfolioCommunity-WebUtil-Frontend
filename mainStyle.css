@@ -2,20 +2,35 @@
     display: flex;
     padding: 15px;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center; /* 줄바꿈 시 가운데 정렬 */
     gap: 25px;
-
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .companyBox {
-    width: 300px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     background-color: white;
     border-radius: 10px;
     display: flex;
-    padding: 10px;
-    flex-direction: column;
+    padding: 20px;
+    flex-direction: row;
     align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.companyBox:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.companyBox:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
 }
 
 .companyInfo {
@@ -23,10 +38,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: flex-start;
 }
 
 .companyName {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
     color: #333;
     font-family: "Pretendard";
@@ -34,14 +50,15 @@
 }
 
 .companylogo {
-    width: 250px;
-    height: 25%;
-    flex: 1;
+    width: 30%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .companyDescription {
     font-family: "Pretendard";
     font-size: 18px;
     font-weight: 500;
-
+    text-align: left;
+    color: #666;
 }

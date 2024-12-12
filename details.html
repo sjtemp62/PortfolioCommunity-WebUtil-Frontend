@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="registerStyle.css">
+    <link rel="stylesheet" href="detailsStyle.css">
 </head>
 
 <body>
@@ -34,40 +34,24 @@
             </div>
         </header>
 
-        <aside class="aside-left" style="background-color: transparent;">
-        </aside>
-
         <main class="main">
-            <div class="register-form-container">
-                <form class="grid-register" method="post" action="" id="register-form">
-                    <p>회원가입</p>
-                    <div class="register-input-container">
-                        <label for="name" class="register-input-label">성명</label>
-                        <input type="text" name="name" id="name" class="register-input" required>
+            <div class="details-container">
+                <header class="details-header">
+                    <h1 id="companyName">회사명</h1>
+                </header>
+                <main class="details-main">
+                    <div class="company-logo-container">
+                        <img id="companyLogo" src="" alt="회사 로고" class="company-logo">
                     </div>
-                    <div class="register-input-container">
-                        <label for="tel" class="register-input-label">전화번호</label>
-                        <input type="tel" name="tel" id="tel" class="register-input" required>
+                    <div class="company-info">
+                        <p id="companyDescription">회사 설명이 여기에 표시됩니다.</p>
                     </div>
-                    <div class="register-input-container">
-                        <label for="email" class="register-input-label">이메일(ID)</label>
-                        <input type="email" name="email" id="email" class="register-input" required>
-                    </div>
-                    <div class="register-input-container">
-                        <label for="password" class="register-input-label">비밀번호</label>
-                        <input type="password" name="password" id="password" class="register-input" required>
-                    </div>
-                    <div class="register-input-container">
-                        <label for="passwordConfirm" class="register-input-label">비밀번호 확인</label>
-                        <input type="password" name="passwordConfirm" id="passwordConfirm" class="register-input" required>
-                    </div>
-                    <input type="submit" class="register-submit"></input>
-                </form>
+                </main>
+                <footer class="details-footer">
+                    <a href="main.html" class="back-button">메인으로 돌아가기</a>
+                </footer>
             </div>
         </main>
-
-        <aside class="aside-right" style="background-color: transparent;">
-        </aside>
 
         <footer class="footer">
             <address>
@@ -79,7 +63,35 @@
             </address>
         </footer>
     </div>
-    <script src="register.js"></script>
 </body>
 
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사 상세 정보</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="detailsStyle.css">
+</head>
+<body>
+    <div class="details-container">
+        <header class="details-header">
+            <h1 id="companyName">회사명</h1>
+        </header>
+        <main class="details-main">
+            <div class="company-logo-container">
+                <img id="companyLogo" src="" alt="회사 로고" class="company-logo">
+            </div>
+            <div class="company-info">
+                <p id="companyDescription">회사 설명이 여기에 표시됩니다.</p>
+            </div>
+        </main>
+        <footer class="details-footer">
+            <a href="main.html" class="back-button">메인으로 돌아가기</a>
+        </footer>
+    </div>
+</body>
 </html>

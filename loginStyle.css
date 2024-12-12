@@ -5,7 +5,7 @@
 }
 
 .login-form-container {
-    background-color: #FDFFF7;
+    background-color: #fff;
     width: 70%;
     height: 50%;
     place-items: center;
@@ -14,6 +14,7 @@
     border-radius: 3%;
     max-width: 450px;
     box-shadow: 10px 10px 10px grey;
+    min-width: 400px;
     max-height: 500px;
     min-height: 400px;
 }
