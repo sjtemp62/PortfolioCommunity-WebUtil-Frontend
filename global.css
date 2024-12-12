@@ -36,10 +36,9 @@
 
 .main {
     grid-area: main;
-    background-color: #f5f5f5;
-    display: grid;
-    grid-template-rows: 100px 10fr;
-
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
 }
 
 .footer {
@@ -140,7 +139,7 @@ nav {
     line-height: 20px;
 }
 
-.company-name {
+.my-company-name {
     font-size: 15px;
     font-weight: 700;
 }
